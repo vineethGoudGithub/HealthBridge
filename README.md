@@ -16,7 +16,7 @@ It tracks doctor visits, analyzes interaction sentiment, and suggests next steps
 - **Database**: Neon (PostgreSQL)
 - **AI Logic**: LangGraph + Llama 3.3 (via Groq)
 
-## How to Run Locally
+## How to Run 
 
 ### 1. Backend Setup
 1. Open a terminal in the `backend` folder.
