@@ -1,61 +1,41 @@
-# Welcome to HealthBridge AI CRM! 🩺
+# HealthBridge AI CRM
 
-HealthBridge is your smart assistant for conversations with healthcare professionals (HCPs). Say goodbye to tedious form-filling; just talk to HealthBridge, and it handles the data entry for you.
+HealthBridge is an AI-powered CRM designed to track interactions with healthcare professionals (HCPs). The goal was to remove the friction of manual form-filling—you just chat with the AI about your visit, and it handles the data entry for you.
 
-It tracks visits, analyzes your interactions, and offers advice on next steps. What makes it special?
+It uses LangGraph and Llama 3.3 to understand the context, sentiment, and key discussion points from your notes.
 
-*   **Conversational CRM**: Simply type *"Met Dr. Smith, he loved the new trial results,"* and it's logged instantly.
-*   **The Brain (AI)**: Powered by LangGraph and Llama 3.3, it truly understands your input, picking up on emotions and key discussion points.
+## Key Features
+- **Conversational Logging**: Just type a quick note like "Met Dr. Smith, he's interested in the new trial results" and it's logged instantly.
+- **AI Insights**: Powered by Llama 3.3 (via Groq) to analyze emotions and key takeaways from every interaction.
+- **Clean Dashboard**: A simple UI to track your visits and see analytics at a glance.
+- **Smart Suggestions**: The AI looks at your history and suggests the best next steps for specific physicians.
 
----
+## Tech Stack
+- **Frontend**: React (Vite) + Redux for state management.
+- **Backend**: FastAPI (Python) for the API layer.
+- **Database**: Neon (PostgreSQL).
+- **AI**: LangGraph to orchestrate the agent's logic.
 
-## 🚀 What’s the Big Deal?
+## Getting Started
 
-*   **Chat with Your CRM**: Type a quick note, and boom—it's logged.
-*   **The Brain (AI)**: Utilizes LangGraph and Llama 3.3 to comprehend your words and context.
-*   **Attractive Dashboard**: Enjoy a clean, high-quality UI that displays your statistics at a glance.
-*   **Intelligent Suggestions**: Unsure of your next steps? The AI reviews your history and suggests optimal actions.
+### 1. Backend
+1. Navigate to the `backend` folder.
+2. Install dependencies: `pip install -r requirements.txt`
+3. Make sure your `.env` file has a valid `GROQ_API_KEY`.
+4. Run the server: `python -m app.main`
 
----
+### 2. Frontend
+1. Navigate to the `frontend` folder.
+2. Install dependencies: `npm install`
+3. Start the dev server: `npm run dev`
+4. Open `http://localhost:5173` in your browser.
 
-## 💻 Tech We Used
-We embraced cutting-edge technology:
-
-*   **Frontend**: Built with React (super fast with Vite) and Redux for state management.
-*   **Backend**: FastAPI (Python) for speed and reliability.
-*   **Database**: Neon PostgreSQL for secure cloud storage.
-*   **AI**: LangGraph to manage the bot's thinking process.
-
----
-
-## 🛠️ Let’s Get It Running!
-To get started, follow these steps:
-
-### 1. The Backend (The Brain)
-Open a terminal in the `backend` folder:
-1.  Install dependencies: `pip install -r requirements.txt`
-2.  Check the `.env` file and enter your **GROQ API key** (starting with `gsk_...`).
-3.  Run the server: `python -m app.main`
-
-### 2. The Frontend (The Face)
-Open another terminal in the `frontend` folder:
-1.  Install packages: `npm install`
-2.  Start the dev server: `npm run dev`
-3.  Open your browser and go to: `http://localhost:5173`
+## Try These Prompts
+In the AI Assistant, you can try things like:
+- "Just saw Dr. Oak and discussed HeartGuard; it went really well!"
+- "What do I know about Dr. Elena Vance?"
+- "Can you summarize my relationship with Dr. Oak?"
+- "What should I do next for Isaac Kleiner?"
 
 ---
-
-## 🧪 Give It a Try!
-Once the app is open, click on the **AI Assistant** and test these prompts:
-
-*   *"I just saw Dr. Oak and discussed HeartGuard; it was wonderful!"*
-*   *"What do I know about Dr. Elena Vance?"*
-*   *"Can you summarize my relationship with Dr. Oak?"*
-*   *"What should I do next for Isaac Kleiner?"*
-
----
-
-## 📊 Project Support
-If you need to correct a record, use the three-dots menu on the dashboard to make adjustments. 
-
-**Enjoy your experience with HealthBridge!**
+Hope this helps keep your HCP interactions organized!
